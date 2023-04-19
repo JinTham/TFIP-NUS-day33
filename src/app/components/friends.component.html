@@ -6,7 +6,7 @@
     <tr>
       <td>Name:</td>
       <td>
-        <input type="text" size="30" formControlName="name">
+        <input type="text" size="30" formControlName="name" [readOnly]="readOnly">
       </td>
     </tr>
     <tr>
@@ -24,7 +24,10 @@
     <tr>
       <td></td>
       <td>
-        <button type="submit" [disabled]="form.invalid"> Add </button>
+        <ng-content></ng-content>
+        <!--
+          <button type="submit" [disabled]="form.invalid"> Add </button>
+        -->
       </td>
     </tr>
   </table>
